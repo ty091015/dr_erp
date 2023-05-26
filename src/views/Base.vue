@@ -1,4 +1,5 @@
 <script setup>
+import PlanManage from '@/views/PlanManage/PlanManage.vue'
 import { httpHelper } from '@/utils/axios.js'
 httpHelper('/api/account/token/', 'post').then(function(e) {
   console.log('dddd', e)
@@ -11,7 +12,9 @@ httpHelper('/api/account/token/', 'post').then(function(e) {
       <header class="clw-header"></header>
       <section class="clw-container">
         <aside class="clw-aside"></aside>
-        <main class="clw-main"></main>
+        <main class="clw-main">
+          <PlanManage/>
+        </main>
       </section>
     </section>
   </div>
